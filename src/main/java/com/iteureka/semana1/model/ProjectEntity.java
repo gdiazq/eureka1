@@ -1,5 +1,7 @@
 package com.iteureka.semana1.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -27,6 +29,7 @@ public class ProjectEntity {
     @ManyToOne
     @JoinColumn(name = "cliente_id")
     @ToString.Exclude
+    @JsonBackReference
     private CustomerEntity cliente_id;
 
     @Column(length=255)
