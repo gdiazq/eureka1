@@ -1,8 +1,6 @@
 package com.iteureka.semana1.service;
 
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
-
 import com.iteureka.semana1.model.CustomerEntity;
 import com.iteureka.semana1.repository.CustomerRepository;
 
@@ -16,7 +14,6 @@ public class CustomerService{
 
     private final CustomerRepository customerRepository;
 
-    @GetMapping
     public Iterable<CustomerEntity> findAll() {
         return customerRepository.findAll();
     }
