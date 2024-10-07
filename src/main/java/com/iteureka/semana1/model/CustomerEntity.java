@@ -32,8 +32,8 @@ public class CustomerEntity  {
     @Column(length=255)
     private String nombre;
     
-    @Column(length=255)
-    private String casaMatriz;
+    @Column(nullable = false, length=255)
+    private String casa_matriz;
 
     @OneToMany(
         mappedBy = "cliente_id",

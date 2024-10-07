@@ -8,6 +8,7 @@ import com.iteureka.semana1.model.CustomerEntity;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.Optional;
 
@@ -33,7 +34,7 @@ public class CustomerController {
     }
 
     @PostMapping
-    public CustomerEntity saveCustomer(CustomerEntity customerEntity) {
+    public CustomerEntity saveCustomer(@RequestBody CustomerEntity customerEntity) {
         return customerService.save(customerEntity);
     }
 
