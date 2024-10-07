@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.Optional;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 
 
@@ -34,5 +36,10 @@ public class CustomerController {
     public CustomerEntity saveCustomer(CustomerEntity customerEntity) {
         return customerService.save(customerEntity);
     }
-    
+
+    @DeleteMapping("/{id}")
+    public void deleteCustomerById(@PathVariable Long id) {
+        customerService.deleteById(id);
+    }
+
 }
