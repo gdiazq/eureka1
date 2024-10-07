@@ -1,5 +1,6 @@
 package com.iteureka.semana1.service;
 
+import java.util.Optional;
 import org.springframework.stereotype.Service;
 import com.iteureka.semana1.model.CustomerEntity;
 import com.iteureka.semana1.repository.CustomerRepository;
@@ -16,6 +17,10 @@ public class CustomerService{
 
     public Iterable<CustomerEntity> findAll() {
         return customerRepository.findAll();
+    }
+
+    public Optional<CustomerEntity> findById(Long id) {
+        return customerRepository.findById(id);
     }
 
     

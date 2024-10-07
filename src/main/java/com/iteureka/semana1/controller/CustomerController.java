@@ -6,6 +6,8 @@ import com.iteureka.semana1.service.CustomerService;
 import com.iteureka.semana1.model.CustomerEntity;
 
 import lombok.AllArgsConstructor;
+import org.springframework.web.bind.annotation.PathVariable;
+import java.util.Optional;
 import org.springframework.web.bind.annotation.GetMapping;
 
 
@@ -20,6 +22,11 @@ public class CustomerController {
     public Iterable<CustomerEntity> getAllCustomer() {
         return customerService.findAll();
     }
+
+    @GetMapping ("/{id}") 
+        public Optional<CustomerEntity> getCustomerById(@PathVariable Long id) {
+            return customerService.findById(id);
+        }
     
     
 }
