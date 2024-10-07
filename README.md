@@ -74,6 +74,59 @@ Se recomienda instalar postman, thunderbird como extension para vscode o utiliza
 GET localhost:8080/customer
 ```
 
+- Listar todos los project
+
+```bash
+GET localhost:8080/project
+```
+
+- Buscar cliente por id
+
+```bash
+GET localhost:8080/customer/{id}
+```
+Ejemplo: localhost:8080/customer/1
+
+- Crear nuevo cliente
+```bash
+POST localhost:8080/customer
+```
+Ejemplo: localhost:8080/customer
+```json
+{
+    "nombre": "Cliente F",
+    "casa_matriz": "Casa Matriz F"
+}
+```
+
+- Eliminar cliente por id
+```bash
+DELETE localhost:8080/customer
+```
+Ejemplo: localhost:8080/6
+
+## Datos de ejemplo
+
+No son necesarios ya que si se genera el docker con docker-compose la base de datos ya tendra datos en BBDD, aunque se usaron estos datos
+```sql
+INSERT INTO clientes (nombre, casa_matriz)
+VALUES
+    ('Cliente A', 'Casa Matriz A'),
+    ('Cliente B', 'Casa Matriz B'),
+    ('Cliente C', 'Casa Matriz C'),
+    ('Cliente D', 'Casa Matriz D'),
+    ('Cliente E', 'Casa Matriz E');
+
+INSERT INTO proyectos (cliente_id, nombre)
+VALUES
+    (1, 'Proyecto Alpha'),
+    (2, 'Proyecto Beta'),
+    (3, 'Proyecto Gamma'),
+    (4, 'Proyecto Delta'),
+    (5, 'Proyecto Epsilon');
+```
+
+
 
 
 
