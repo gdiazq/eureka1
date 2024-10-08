@@ -101,9 +101,9 @@ Ejemplo: localhost:8080/customer
 
 - Eliminar cliente por id
 ```bash
-DELETE localhost:8080/customer
+DELETE localhost:8080/customer/{id}
 ```
-Ejemplo: localhost:8080/6
+Ejemplo: localhost:8080/customer/6
 
 ## Datos de ejemplo
 
