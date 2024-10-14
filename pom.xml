@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.iteureka</groupId>
-	<artifactId>semana1</artifactId>
+	<artifactId>semana2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>semana1</name>
 	<description>Demo project for Spring Boot</description>

@@ -1,42 +1,35 @@
-# Proyecto Eureka Semana 1
+# Proyecto Eureka Semana 2
 
-## Conceptos a manejar 
-
-- Estructura de un proyecto Spring boot 
-- Entender las bases de la orientación a objetos  
-- Conocer el concepto de una API Rest 
-- Validar API por medio de Postman o programa similar 
+- Conocer el concepto tras la arquitectura de microservicios
+- Entender conceptos como servidor de nombres y API Gateway, y como se aplican en la arquitectura de microservicios
+- Entender la importancia de los test unitarios
+- Analizar el concepto de cobertura de código y cómo aplicarlo a un proyecto práctico
 
 ## Que se evaluara
 
-En esta ocasión se solicita realizar un ejercicio siguiendo estas instrucciones: - - - - 
-- Crea un proyecto Spring Boot, usando la versión 3.x  
-- Se te indicarán dos entidades con las que debes trabajar de aquí en adelante. Estas 
-entidades estarán relacionadas entre sí, y se denominarán para efectos de este 
-ejercicio “entidad primaria” y a la otra “entidad secundaria”.  
-- El proyecto debe crear las acciones que respondan a lo siguiente: 
-Despliegue de registros de la entidad principal 
-Despliegue de registros de la entidad secundaria 
-Despliegue de registros de la entidad principal por identificador 
-Creación de un registro en la entidad principal  
-Eliminación de un registro desde la entidad principal 
-- La asociación entre las entidades se debe realizar de manera explícita por medio de 
-un atributo en común. 
-- Cada capa del proyecto debe estar debidamente separada. 
+- Agrega al pom.xml las dependencias que necesites para implementar pruebas unitarias en tu proyecto Spring Boot. Si ya están incorporadas, omite este paso.
+- Crea una clase que contenga un conjunto de pruebas que permita validar las siguientes operaciones: suma, resta, multiplicación, división y módulo.
+- Crea una clase de tipo Spring Boot Test que contenga al menos dos pruebas unitarias que validen los repositorios del proyecto.
+- Crea una clase de tipo Spring Boot Test que contenga al menos dos pruebas unitarias que validen los servicios del proyecto.
+- Crea una clase de tipo Sprint Boot Test que contenga al menos dos pruebas unitarias que validen los controladores del proyecto.
 
 ## Alcances
 
-- Debes publicar el ejercicio en un repositorio GitHub 
-- El repositorio debe tener un README que señale los pasos para descargar, compilar 
-y ejecutar la solución 
-- Se recomienda indicar en el README las URL que permitan acceder a los endpoints, 
-junto a datos de ejemplos que permitan ejecutarlos. 
+Respecto de la entrega algunos alcances:
+- Debes publicar el ejercicio en un repositorio GitHub
+- Si seleccionas realizar el ejercicio 1, puedes usar el mismo repositorio anterior, cuidando que la primera entrega quede en una rama independiente.
+- Si seleccionas realizar el ejercicio 2, se recomienda que partas desde un repositorio vacío.
+- El repositorio debe tener un README que señale los pasos para descargar, compilar y ejecutar la solución
+- Se recomienda indicar en el README las URL que permitan acceder a los endpoints, junto a datos de ejemplos que permitan ejecutarlos.
 
 ## Requisitos
 
 - Java 21 o superior
 - Maven 3.x
 - Spring Boot 3.x
+- Mockito
+- Junit5
+- Docker
 
 ## Instalacion 
 
@@ -105,6 +98,10 @@ DELETE localhost:8080/customer/{id}
 ```
 Ejemplo: localhost:8080/customer/6
 
+## Para ejecutar las pruebas
+
+Para ejecutar las pruebas uno debe iniciar el contenedor del docker y despues iniciar el proyecto, despues ir carpeta a carpeta de los test para poder ejecutar haciando click derecho e ir a la parte de Run Test
+
 ## Datos de ejemplo
 
 No son necesarios ya que si se genera el docker con docker-compose la base de datos ya tendra datos en BBDD, aunque se usaron estos datos
@@ -125,8 +122,3 @@ VALUES
     (4, 'Proyecto Delta'),
     (5, 'Proyecto Epsilon');
 ```
-
-
-
-
-
